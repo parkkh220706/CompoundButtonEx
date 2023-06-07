@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입 양식"
+        android:gravity="center"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <TableRow android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성함:" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="이름"
+                android:textSize="13dp"/>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성별:"/>
+
+            <RadioGroup
+                android:id="@+id/rg_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_g1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="남성"
+                    android:textSize="13dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_g2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="여성"
+                    android:textSize="13dp"/>
+
+            </RadioGroup>
+
+
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="거주지:"/>
+
+            <RadioGroup
+                android:id="@+id/rg_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_c1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="서울"
+                    android:textSize="13dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_c2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="부산"
+                    android:textSize="13dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_c3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="기타"
+                    android:textSize="13dp"/>
+
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="연락처:"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <EditText
+                    android:id="@+id/et_num1"
+                    android:layout_width="wrap_content"
+                    android:ems="3"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="13dp"/>
+
+                <EditText
+                    android:id="@+id/et_num2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="3"
+                    android:inputType="number"
+                    android:textSize="13dp"/>
+
+                <EditText
+                    android:id="@+id/et_num3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="3"
+                    android:inputType="number"
+                    android:textSize="13dp"/>
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="연락가능한 수단을 선택해주세요(중복가능)"
+            android:gravity="center"
+            android:textSize="13dp" />
+
+
+            <LinearLayout
+                android:gravity="center">
+                <CheckBox
+                    android:id="@+id/cb_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-MAIL"
+                    />
+                <CheckBox
+                    android:id="@+id/cb_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전화"
+                    />
+                <CheckBox
+                    android:id="@+id/cb_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="방문"
+                    />
+                <CheckBox
+                    android:id="@+id/cb_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="문자메시지"
+                    />
+
+            </LinearLayout>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textStyle="bold"/>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="회원정보"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+</LinearLayout>
